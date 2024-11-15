@@ -72,7 +72,7 @@ export const adsApi = {
     api.get('/ads', { params }),
   
   getAdForVideo: (videoId) => 
-    api.get(`/ads/video/${videoId}`)
+    api.get(`/videos/${videoId}`)
 };
 
 export default api;

@@ -8,6 +8,8 @@ export const Profile = () => {
   const { user } = useAuth();
   const { data: videos, isLoading } = useVideos({ userId: user?.id });
 
+
+
   if (isLoading) {
     return <Loading size="large" />;
   }
@@ -31,6 +33,7 @@ export const Profile = () => {
       <div className="space-y-4">
         <h2 className="text-xl font-semibold">Your Videos</h2>
         <VideoList videos={videos} />
+        {console.log(videos)}
       </div>
     </div>
   );
