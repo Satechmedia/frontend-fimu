@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-  Play, Pause, Volume2, VolumeX, Maximize, Minimize, Settings, 
-  SkipBack, SkipForward, Check, Loader, RotateCcw, RotateCw
+  Play, Pause, Volume2, VolumeX, Maximize, Minimize, Settings, Check, Loader, RotateCcw, RotateCw
 } from 'lucide-react';
-import { IconRewindForward10 } from '@tabler/icons-react';
+import { IconRewindForward10, IconRewindBackward10 } from '@tabler/icons-react';
 import _ from 'lodash';
 
 const VideoPlayer = ({ 
@@ -266,11 +265,7 @@ const VideoPlayer = ({
                 }}
                 className="text-white hover:text-blue-400 transition group relative"
               >
-                <RotateCcw size={24} />
-                
-                <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black/75 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 ">
-                  -10s
-                </span>
+                <IconRewindBackward10 size={24}/>
               </button>
 
               <button 
@@ -280,12 +275,7 @@ const VideoPlayer = ({
                 }}
                 className="text-white hover:text-blue-400 transition group relative"
               >
-                <RotateCw size={24} />
                 <IconRewindForward10 size={24} />
-                
-                <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black/20 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100">
-                  +10s
-                </span>
               </button>
 
               <div className="flex items-center space-x-2 group">
